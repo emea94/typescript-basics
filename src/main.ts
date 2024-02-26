@@ -100,10 +100,9 @@ console.log("!--- Bonus ---!")
 
 console.log("\n")
 console.log("!--- 1. Sort these numbers in descending order. ---!")
+
 const list: number[] = [15, 6, 3213, 9, 0, 12, 8464 , 1, 1264, 481, 186, 1031, 194];
-
-
-const descending: number[] = list.sort((a, b) => b - a)
+const descending: number[] = list.slice().sort((a, b) => b - a)
 console.log(descending)
 
 console.log("\n")
@@ -111,6 +110,7 @@ console.log("!--- 2. Square these numbers. ---!")
 const squared: number[] = list.map((number: number) => number * number)
 console.log(squared)
 // Frage: warum sortiert er mir die Zahlen hier?
+// Konstante wird im Arbeitsspeicher hinterlegt und immer mit den weiteren Funktionen aktualisiert. Um das zu verhindern müssten man vor der neuen Funktion immer ein .slice() einfügen (siehe Aufgabe 1)
 
 console.log("\n")
 console.log("!--- 3. Remove the lowest two numbers and the highest 4 numbers from the list. ---!")
