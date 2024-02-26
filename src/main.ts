@@ -1,5 +1,5 @@
 //Step 1: Declare a variable named 'age' of type 'number' and assign a value to it.
-const age: number = 5;
+const age: number = 29;
 const age2: number = 20;
 
 // Step 2: Write a 'for' loop that outputs the numbers from 1 to 'age'.
@@ -17,7 +17,7 @@ if (age2 > 18) {
 let score: number = 0;
 
 //Step 5: Use an 'if' statement to check if 'score' has a value. Display 'Score is available.' if 'score' has a value other than 0
-if (score > 0) {
+if (score > 0 || score <0) {
     console.log("Score is available!")
 }
 
@@ -64,3 +64,33 @@ if (!isAdmin) {
 } else {
     console.log("isAdmin is true.")
 }
+
+console.log("\n")
+console.log("!--- Functions ---!")
+// Step 1: Create an array of numbers. Use the '.map' function to double all the numbers in the array.
+const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const doubledNumbers: number[] = numbers.map((number: number) => number * 2)
+console.log(doubledNumbers)
+
+// Step 2: Create an array of words. Use the '.filter' function to select only the words that are longer than 5 letters.
+
+const words: string[] = ["Bulldogge", "Mops", "Pudel", "Beagle", "Boxer", "Dackel", "Chihuahua"]
+const longerThan5: string[] = words.filter((word: string) => word.length > 5)
+console.log(longerThan5)
+
+// Step 3: Create an array of numbers. Use the '.reduce' function to calculate the sum of all the numbers in the array.
+
+const numbers2: number[] = [3, 4, 8, 2, 7, 9, 1, 5, 6]
+const reduce: number = numbers2.reduce((accumulator, currentValue) => accumulator + currentValue)
+console.log(reduce)
+
+// Step 4: Create an array of numbers. Use the '.some' function to check if at least one number is greater than 10.
+
+const numbers3: number[] = [11, 3, 9]
+const numbers4: number[] = [3, 4, 8]
+
+const greaterThan10: boolean = numbers3.some((element) => element > 10)
+console.log(greaterThan10)
+
+const isAnyGreaterThan10: boolean = numbers4.some((element) => element > 10)
+console.log(isAnyGreaterThan10)
