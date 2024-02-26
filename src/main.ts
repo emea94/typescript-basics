@@ -94,3 +94,45 @@ console.log(greaterThan10)
 
 const isAnyGreaterThan10: boolean = numbers4.some((element) => element > 10)
 console.log(isAnyGreaterThan10)
+
+console.log("\n")
+console.log("!--- Bonus ---!")
+
+console.log("\n")
+console.log("!--- 1. Sort these numbers in descending order. ---!")
+const list: number[] = [15, 6, 3213, 9, 0, 12, 8464 , 1, 1264, 481, 186, 1031, 194];
+
+
+const descending: number[] = list.sort((a, b) => b - a)
+console.log(descending)
+
+console.log("\n")
+console.log("!--- 2. Square these numbers. ---!")
+const squared: number[] = list.map((number: number) => number * number)
+console.log(squared)
+// Frage: warum sortiert er mir die Zahlen hier?
+
+console.log("\n")
+console.log("!--- 3. Remove the lowest two numbers and the highest 4 numbers from the list. ---!")
+const deleteHighestAndLowest4 = (array: number[]): void =>{
+    array.sort((a, b) => a - b),
+    array.splice(0, 4),
+    array.sort((a, b) => b - a),
+    array.splice(0, 4)
+};
+deleteHighestAndLowest4(list);
+console.log(list)
+
+console.log("\n")
+console.log("!--- 4. Remove all numbers that are divisible by 4. ---!")
+const removeDivisibleBy4 = (array: number[]): void =>{
+    array.filter(number => number % 4 !== 0),
+    array.splice(0, 4)
+};
+removeDivisibleBy4(list);
+console.log(list)
+
+console.log("\n")
+console.log("!--- 5. Add up all the numbers. ---!")
+const reduceBonus: number = list.reduce((accumulator, currentValue) => accumulator + currentValue)
+console.log(list)
